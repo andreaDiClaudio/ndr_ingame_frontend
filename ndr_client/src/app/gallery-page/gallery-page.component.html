@@ -1,0 +1,14 @@
+<ndr-navbar [isGallery]="isGallery"></ndr-navbar>
+<hr>
+<hr>
+
+<div class="flex flex-wrap gap-x-56 gap-y-24 justify-center py-10">
+  <div *ngFor="let game of folders">
+    <div class="flex flex-col justify-center items-center hover:cursor-pointer" (click)="openGame(game.game_name)">
+      <div class="border-orange-500 border-2 p-32"></div>
+      <div>
+        <span class="italic">{{formatString(game.game_name)}}</span>
+      </div>
+    </div>
+  </div>
+</div>

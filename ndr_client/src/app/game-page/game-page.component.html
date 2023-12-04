@@ -1,0 +1,19 @@
+<ndr-navbar [isGallery]="isGallery"></ndr-navbar>
+<hr>
+<hr>
+
+<div class="flex justify-between p-10 pt-2">
+  <p class="font-medium underline select-none hover:cursor-pointer">...Previous Game</p>
+  <p class="font-medium underline hover:cursor-pointer select-none">Next Game...</p>
+</div>
+
+<div class="flex overflow-x-scroll gap-x-10 hide-scrollbar p-10 pt-0 pb-0">
+
+  <div class="flex sm:pl-10 justify-center">
+    <p class="text-[10rem] text-black font-medium">Stray</p>
+  </div>
+
+  <div *ngFor="let image of images" class="flex-shrink-0 w-full sm:w-[75rem] h-auto">
+    <img [src]="image" class="w-[98vw] h-full object-cover select-none" alt="Gallery image">
+  </div>
+</div>

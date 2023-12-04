@@ -1,0 +1,25 @@
+<div *ngIf="isGallery">
+  <div class="flex justify-between items-center px-10 py-5">
+    <img [routerLink]="['/']" src="assets/images/NeroEmpty.png" alt="ndr ingame logo" width="100 rem" class="select-none hover:cursor-pointer">
+    <div class="flex gap-x-4">
+      <p class="select-none text-2xl text-black hover:cursor-pointer" [routerLink]="['/gallery']" >Gallery</p>
+      <p class="select-none text-2xl text-black hover:cursor-pointer" [routerLink]="['/']" fragment="aboutComponent">About</p>
+      <div class="pl-5">
+        <i class="material-icons text-black text-3xl hover:cursor-pointer select-none">email</i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!isGallery">
+  <div class="flex justify-between items-center px-10 py-5">
+    <img [routerLink]="['/']" src="assets/images/biabncoEmpty.png" alt="ndr ingame logo" width="100 rem" class="select-none hover:cursor-pointer">
+    <div class="flex gap-x-4">
+      <p class="select-none text-2xl text-white hover:cursor-pointer" [routerLink]="['/gallery']" >Gallery</p>
+      <p class="select-none text-2xl text-white hover:cursor-pointer" (click)="aboutClick()">About</p>
+      <div class="pl-5">
+        <i class="material-icons text-white text-3xl hover:cursor-pointer select-none">email</i>
+      </div>
+    </div>
+  </div>
+</div>
