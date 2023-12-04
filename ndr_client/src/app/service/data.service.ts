@@ -1,7 +1,6 @@
 import {inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {catchError, firstValueFrom, of, tap} from "rxjs";
-import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
+import {tap} from "rxjs";
 import {GameFolder} from "../model/model";
 
 @Injectable({
@@ -10,7 +9,7 @@ import {GameFolder} from "../model/model";
 export class DataService {
   private http = inject(HttpClient);
 
-  private gamesCountUrl = "http://localhost:8080/api/games"
+  private gamesCountUrl = "https://ndr-ingame-backend.vercel.app/api/games"
 
   folders: GameFolder[] =[];
 
