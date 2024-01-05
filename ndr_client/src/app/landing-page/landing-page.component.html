@@ -1,4 +1,9 @@
-<img src="https://res.cloudinary.com/ds45ddzu6/image/upload/v1699782173/samples/ndr-ingame/landing_page/Horizon_LandingPage.jpg" alt="background image" class="absolute h-[98vh] w-full object-cover z-[-2] select-none">
+<div class="container">
+  <div id="scene" >
+    <img class="layer" src="assets/images/landing/ndr_background_only.jpg" alt="background_image">
+    <img data-depth="0.1" class="layer" src="assets/images/landing/ndr_background_foreground.png" alt="background_image">
+  </div>
+</div>
 <ndr-navbar [isGallery]="isGallery" (scrollAbout)="onNavbarButtonClick()"></ndr-navbar>
 
 <div class="flex justify-center items-center h-[98vh]">

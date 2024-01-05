@@ -13,8 +13,8 @@ export class GamePageComponent implements OnInit{
   images: string[] = [];
 
   constructor(private route: ActivatedRoute) {
-    for(let i= 1; i<=14; i++){
-      this.images.push(`./assets/images/gallery/Stray/Stray${i}.jpg`);
+    for(let i= 1; i<=4; i++){
+      this.images.push(`./assets/images/gallery/Stray${i}.jpg`);
     }
   }
 

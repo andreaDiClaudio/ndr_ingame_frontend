@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Location} from "@angular/common";
+import * as Parallax from "parallax-js";
 
 @Component({
   selector: 'ndr-landing-page',
@@ -17,6 +18,14 @@ export class LandingPageComponent implements  AfterViewInit {
   }
 
   ngAfterViewInit() {
+    var scene = document.getElementById('scene');
+    if (scene) {
+      var parallaxInstance = new Parallax(scene, {
+        relativeInput: true,
+        scalarY: 0.2, // Set the limit on the Y-axis to 0 (no upward movement)
+      });
+    }
+
     this.route.fragment.subscribe(fragment => {
       // Check if the path has the fragment (f.e. #about)
       if (fragment) {

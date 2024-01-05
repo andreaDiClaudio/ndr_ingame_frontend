@@ -13,14 +13,12 @@ export class GalleryPageComponent {
 
   isGallery: boolean;
 
-  private gamesCountUrl = "http://localhost:8080/api/games"
-
   folders: GameFolder[] = [];
 
   constructor(private router: Router, private dataService: DataService) {
     this.isGallery = true;
 
-    this.dataService.getSubfolders().subscribe((folders) => {
+    this.dataService.getSubFolders().subscribe((folders) => {
       this.folders = this.dataService.folders;
 
         console.log(this.folders)

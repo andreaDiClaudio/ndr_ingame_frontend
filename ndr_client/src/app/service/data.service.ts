@@ -9,13 +9,14 @@ import {GameFolder} from "../model/model";
 export class DataService {
   private http = inject(HttpClient);
 
-  private gamesCountUrl = "https://ndr-ingame-backend.vercel.app/api/games"
+  //private gamesCountUrl = "https://ndr-ingame-backend.vercel.app/api/games"
+  private gamesCountUrl = "http://localhost:8080/api/games"
 
   folders: GameFolder[] =[];
 
   constructor() { }
 
-    getSubfolders() {
+    getSubFolders() {
         return this.http.get(this.gamesCountUrl, {responseType: 'json'}).pipe(tap((result) => {
             this.folders = result as GameFolder[];
         }))
